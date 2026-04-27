@@ -919,6 +919,75 @@ footer{
   .hero-stats{gap:28px}
   .sep{margin:0 20px}
 }
+
+/* AUTH & PROFILE */
+.btn-nav-auth{font-family:'Manrope',sans-serif;font-size:.78rem;font-weight:700;padding:6px 14px;border-radius:6px;border:1px solid var(--line2);background:transparent;color:var(--muted);cursor:pointer;transition:all .2s}
+.btn-nav-auth:hover{color:var(--white);background:var(--bg3)}
+.btn-nav-reg{background:var(--cyan)!important;color:#000!important;border-color:var(--cyan)!important}
+.btn-nav-reg:hover{background:var(--cyan-dk)!important}
+.user-chip{display:flex;align-items:center;gap:8px;background:var(--bg3);border:1px solid var(--line2);border-radius:20px;padding:5px 14px 5px 8px;cursor:pointer;transition:all .2s}
+.user-chip:hover{border-color:var(--cyan)}
+.user-chip-avatar{width:24px;height:24px;border-radius:50%;background:var(--cyan);display:flex;align-items:center;justify-content:center;font-size:.75rem}
+#navUserChip{font-size:.82rem;font-weight:600}
+/* AUTH MODAL */
+#authModal{display:none;position:fixed;inset:0;z-index:10000;background:rgba(0,0,0,.88);backdrop-filter:blur(12px);align-items:center;justify-content:center;padding:20px}
+#authModal.open{display:flex}
+.auth-box{background:#0F1218;border:1px solid rgba(0,212,255,.2);border-radius:16px;width:100%;max-width:440px;padding:36px;position:relative}
+.auth-close{position:absolute;top:14px;right:14px;background:none;border:none;color:var(--muted);cursor:pointer;font-size:1.1rem;padding:4px 8px;border-radius:6px;transition:all .2s}
+.auth-close:hover{color:var(--white);background:var(--bg3)}
+.auth-logo{font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--cyan);letter-spacing:.14em;text-transform:uppercase;margin-bottom:16px}
+.auth-tabs{display:flex;gap:4px;background:var(--bg3);border-radius:8px;padding:4px;margin-bottom:24px}
+.auth-tab{flex:1;font-family:'Manrope',sans-serif;font-size:.85rem;font-weight:600;padding:8px;border-radius:6px;border:none;cursor:pointer;background:transparent;color:var(--muted);transition:all .2s}
+.auth-tab.active{background:var(--bg4);color:var(--white)}
+.auth-field{display:flex;flex-direction:column;gap:6px;margin-bottom:14px}
+.auth-label{font-size:.78rem;color:var(--muted);font-weight:500}
+.auth-input{background:var(--bg3);border:1px solid var(--line2);border-radius:8px;padding:12px 14px;color:var(--white);font-family:'Manrope',sans-serif;font-size:.9rem;outline:none;transition:border-color .2s}
+.auth-input:focus{border-color:var(--cyan)}
+.auth-btn{width:100%;background:var(--cyan);color:#000;font-weight:800;border:none;border-radius:8px;padding:13px;cursor:pointer;font-size:.9rem;font-family:'Manrope',sans-serif;transition:all .2s;margin-top:4px}
+.auth-btn:hover{background:var(--cyan-dk)}
+.auth-btn:disabled{opacity:.6;cursor:not-allowed}
+#authError{display:none;margin-top:12px;padding:10px 14px;background:rgba(255,59,92,.08);border:1px solid rgba(255,59,92,.2);border-radius:7px;font-size:.82rem;color:var(--red);text-align:center}
+/* PROFILE MODAL */
+#profileModal{display:none;position:fixed;inset:0;z-index:10000;background:rgba(0,0,0,.85);backdrop-filter:blur(12px);align-items:center;justify-content:center;padding:20px}
+#profileModal.open{display:flex}
+.profile-box{background:#0F1218;border:1px solid rgba(0,212,255,.2);border-radius:16px;width:100%;max-width:420px;padding:36px;position:relative}
+.profile-avatar{width:72px;height:72px;border-radius:50%;background:linear-gradient(135deg,var(--cyan),var(--green));display:flex;align-items:center;justify-content:center;font-size:2rem;margin:0 auto 16px}
+.profile-name{font-size:1.3rem;font-weight:800;text-align:center;margin-bottom:4px}
+.profile-email-text{font-size:.82rem;color:var(--muted);text-align:center;margin-bottom:24px}
+.profile-stats{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:24px}
+.profile-stat{background:var(--bg3);border-radius:10px;padding:16px;text-align:center}
+.profile-stat-num{font-family:'JetBrains Mono',monospace;font-size:1.8rem;font-weight:700;color:var(--cyan);display:block}
+.profile-stat-label{font-size:.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+.profile-close{position:absolute;top:14px;right:14px;background:none;border:none;color:var(--muted);cursor:pointer;font-size:1.1rem;padding:4px 8px;border-radius:6px;transition:all .2s}
+.profile-close:hover{color:var(--white);background:var(--bg3)}
+/* LEADERBOARD */
+#leaderboard{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.lb-inner{max-width:800px;margin:0 auto;padding:80px 32px}
+.lb-list{margin-top:40px;display:flex;flex-direction:column;gap:10px}
+.lb-item{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 22px;display:flex;align-items:center;gap:16px;transition:border-color .2s}
+.lb-item:hover{border-color:var(--line2)}
+.lb-item.lb-me{border-color:rgba(0,212,255,.35);background:rgba(0,212,255,.04)}
+.lb-rank{font-family:'JetBrains Mono',monospace;font-size:1.4rem;width:40px;text-align:center;flex-shrink:0}
+.lb-user{flex:1;min-width:0}
+.lb-name{font-weight:700;font-size:.95rem}
+.lb-stats{font-size:.78rem;color:var(--muted);margin-top:2px}
+.lb-score{font-family:'JetBrains Mono',monospace;font-size:1.6rem;font-weight:700;color:var(--cyan);text-align:right;flex-shrink:0}
+/* AI RESULT */
+.ai-result-box{display:none;margin-top:16px;padding:16px 18px;border-radius:10px;border-left:3px solid var(--muted)}
+.ai-result-box.danger{display:block;border-color:var(--red);background:rgba(255,59,92,.05)}
+.ai-result-box.safe{display:block;border-color:var(--green);background:rgba(0,229,153,.05)}
+.ai-result-box.warning{display:block;border-color:var(--amber);background:rgba(255,176,32,.05)}
+.ai-result-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;font-weight:700;font-size:.9rem}
+.ai-conf{font-family:'JetBrains Mono',monospace;font-size:.75rem;color:var(--muted)}
+.ai-result-reason{font-size:.85rem;color:var(--muted);margin-bottom:8px;line-height:1.55}
+.ai-result-meta{font-size:.75rem;color:var(--muted);font-family:'JetBrains Mono',monospace}
+.ai-tag{font-size:.68rem;font-family:'JetBrains Mono',monospace;padding:2px 8px;border-radius:4px;font-weight:700}
+.ai-tag.threat{background:rgba(255,59,92,.15);color:var(--red)}
+.ai-tag.safe{background:rgba(0,229,153,.1);color:var(--green)}
+.ai-tag.unknown{background:var(--bg3);color:var(--muted)}
+/* Submit btn loading state */
+#durlSubmitBtn:disabled{opacity:.7;cursor:wait}
+@media(max-width:640px){.lb-inner{padding:56px 20px}}
 </style>
 </head>
 <body>
@@ -964,10 +1033,23 @@ footer{
     <ul class="nav-links">
       <li><a href="#analyzer">Анализатор</a></li>
       <li><a href="#checklists">Чек-листы</a></li>
-      <li><a href="#danger-urls">База угроз</a></li>
+      <li><a href="#danger-urls">База угроз</a>
+  <a href="#leaderboard">🏆 Таблица лидеров</a></li>
+      <li><a href="#leaderboard">🏆 Лидеры</a></li>
       <li><a href="#glossary">Глоссарий</a></li>
       <li><a href="#faq">FAQ</a></li>
       <li><a href="https://www.virustotal.com/gui/home/upload" target="_blank" class="nav-cta">VirusTotal →</a></li>
+      <li id="navAuthBtns" style="display:flex;gap:6px">
+        <button class="btn-nav-auth" onclick="openAuthModal('login')">Войти</button>
+        <button class="btn-nav-auth btn-nav-reg" onclick="openAuthModal('register')">Регистрация</button>
+      </li>
+      <li id="navUserChip" style="display:none;align-items:center;gap:8px">
+        <div class="user-chip" onclick="document.getElementById('profileModal').classList.add('open')">
+          <div class="user-chip-avatar">👤</div>
+          <span id="navUserName">Пользователь</span>
+        </div>
+        <button class="btn-nav-auth" onclick="doLogout()" style="padding:5px 12px">Выйти</button>
+      </li>
     </ul>
     <button class="burger-btn" id="burger" aria-label="Меню">
       <span></span><span></span><span></span>
@@ -978,6 +1060,7 @@ footer{
   <a href="#analyzer">Анализатор</a>
   <a href="#checklists">Чек-листы</a>
   <a href="#danger-urls">База угроз</a>
+  <a href="#leaderboard">🏆 Таблица лидеров</a>
   <a href="#glossary">Глоссарий</a>
   <a href="#faq">FAQ</a>
   <a href="https://www.virustotal.com/gui/home/upload" target="_blank">VirusTotal →</a>
@@ -1194,7 +1277,7 @@ footer{
         </div>
         <div id="durlValidationError" style="display:none;font-size:.82rem;color:#FF3B5C;padding:10px 14px;background:rgba(255,59,92,.07);border-radius:7px;border:1px solid rgba(255,59,92,.2);"></div>
         <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap">
-          <button class="durls-submit-btn" onclick="submitDangerURL()">
+          <button class="durls-submit-btn" id="durlSubmitBtn" onclick="submitDangerURL()">
             🚨 Добавить в базу
           </button>
           <div class="durls-success" id="durlSuccess">
@@ -1202,6 +1285,7 @@ footer{
           </div>
         </div>
       </div>
+    <div class="ai-result-box" id="aiResultBox"></div>
     </div>
 
     <!-- SEARCH & LIST -->
@@ -1221,6 +1305,20 @@ footer{
     <div style="margin-top:32px;padding-top:24px;border-top:1px solid rgba(255,255,255,.06);font-size:.75rem;color:#4A5166;line-height:1.7;text-align:center;">
       Информация в базе предоставляется пользователями «как есть» в ознакомительных целях. SecurityCheckList не проверяет каждую запись и не несёт ответственности за достоверность. 
       Переход по любой из указанных ссылок осуществляется пользователем <strong>исключительно на его собственный риск.</strong>
+    </div>
+  </div>
+</section>
+
+
+<!-- ── LEADERBOARD ───────────────────────── -->
+<div class="sep"></div>
+<section id="leaderboard">
+  <div class="lb-inner">
+    <div class="section-tag">Таблица лидеров</div>
+    <h2 class="section-title">🏆 Лидеры сообщества</h2>
+    <p class="section-sub">Рейтинг пользователей по количеству добавленных и подтверждённых AI угроз. +10 очков за угрозу подтверждённую AI, +2 за остальные.</p>
+    <div class="lb-list" id="leaderboardList">
+      <div style="text-align:center;padding:32px;color:var(--muted)">⏳ Загрузка...</div>
     </div>
   </div>
 </section>
@@ -1271,25 +1369,46 @@ footer{
 <!-- ═══════════════════════════════════════════
      JAVASCRIPT
 ═══════════════════════════════════════════ -->
-<script>
+<script type="module">
 /* ═══════════════════════════════════════════════════════════
-   ADMIN — объявляем ПЕРВЫМ, чтобы onclick в HTML работали
+   FIREBASE CONFIG
 ═══════════════════════════════════════════════════════════ */
+import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js';
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword,
+         signOut, onAuthStateChanged, updateProfile }
+  from 'https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js';
+import { getFirestore, collection, doc, setDoc, getDoc, getDocs,
+         addDoc, updateDoc, deleteDoc, query, orderBy, limit,
+         increment, arrayUnion, serverTimestamp, onSnapshot, where }
+  from 'https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js';
 
-// ▼ Смените пароль здесь ▼
+const firebaseConfig = {
+  apiKey: "AIzaSyAxcd7mepKBnE4m9Y2wA8u88BZPs9byVEc",
+  authDomain: "securitychecklist-da419.firebaseapp.com",
+  projectId: "securitychecklist-da419",
+  storageBucket: "securitychecklist-da419.firebasestorage.app",
+  messagingSenderId: "678445080687",
+  appId: "1:678445080687:web:1f63f636e67015f257ed9a"
+};
+const GEMINI_KEY = "AIzaSyBAzaHsW2ooeOXhFPk2vu7AiO8BJxE9FBw";
+
+const fbApp  = initializeApp(firebaseConfig);
+const auth   = getAuth(fbApp);
+const db     = getFirestore(fbApp);
+
+/* ═══════════════════════════════════════════════════════════
+   ADMIN
+═══════════════════════════════════════════════════════════ */
 const ADMIN_PASSWORD = 'SCL-ADMIN-POZ-2026';
-const ADMIN_HASH     = btoa(ADMIN_PASSWORD);
-
+const ADMIN_HASH = btoa(ADMIN_PASSWORD);
 let isAdminMode = false;
-try { isAdminMode = (sessionStorage.getItem('cg_admin') === ADMIN_HASH); } catch(e){}
-
-let _adminAttempts = 0;
-let _adminLockUntil = 0;
+try { isAdminMode = sessionStorage.getItem('cg_admin') === ADMIN_HASH; } catch(e){}
+let _adminAttempts = 0, _adminLockUntil = 0;
 
 function openAdminModal(){
   if(isAdminMode){ adminLogout(); return; }
   document.getElementById('adminModal').classList.add('open');
-  setTimeout(()=>{ const f=document.getElementById('adminPassInput'); if(f) f.focus(); }, 80);
+  setTimeout(()=>{ const f=document.getElementById('adminPassInput'); if(f) f.focus(); },80);
 }
 function closeAdminModal(){
   document.getElementById('adminModal').classList.remove('open');
@@ -1297,15 +1416,12 @@ function closeAdminModal(){
   const e=document.getElementById('adminErr'); if(e) e.classList.remove('show');
 }
 function toggleAdminPass(){
-  const i=document.getElementById('adminPassInput'), e=document.getElementById('adminEye');
+  const i=document.getElementById('adminPassInput'),e=document.getElementById('adminEye');
   if(!i||!e) return;
-  i.type = i.type==='password' ? 'text' : 'password';
-  e.textContent = i.type==='password' ? '👁' : '🙈';
+  i.type=i.type==='password'?'text':'password';
+  e.textContent=i.type==='password'?'👁':'🙈';
 }
-function _showAdminErr(msg){
-  const e=document.getElementById('adminErr');
-  if(e){ e.textContent=msg; e.classList.add('show'); }
-}
+function _showAdminErr(msg){ const e=document.getElementById('adminErr'); if(e){e.textContent=msg;e.classList.add('show');} }
 function doAdminLogin(){
   const now=Date.now();
   if(now<_adminLockUntil){ _showAdminErr('⏳ Подождите '+Math.ceil((_adminLockUntil-now)/1000)+' сек.'); return; }
@@ -1323,59 +1439,548 @@ function doAdminLogin(){
 function activateAdminMode(){
   const bar=document.getElementById('adminBar'); if(bar) bar.classList.add('active');
   document.body.style.paddingBottom='72px';
-  renderDangerURLs(dangerURLs);
+  loadAndRenderURLs();
 }
 function adminLogout(){
   isAdminMode=false;
   try{ sessionStorage.removeItem('cg_admin'); }catch(e){}
   const bar=document.getElementById('adminBar'); if(bar) bar.classList.remove('active');
   document.body.style.paddingBottom='';
-  renderDangerURLs(dangerURLs);
+  loadAndRenderURLs();
 }
-function adminClearAll(){
-  if(!isAdminMode) return;
-  if(!confirm('Удалить ВСЕ записи из базы?')) return;
-  dangerURLs=[]; saveDangerURLs(); renderDangerURLs(dangerURLs);
-}
-function adminResetToSeed(){
-  if(!isAdminMode) return;
-  if(!confirm('Восстановить исходные 5 записей? Пользовательские данные удалятся.')) return;
-  dangerURLs=JSON.parse(JSON.stringify(SEED_URLS)); saveDangerURLs(); renderDangerURLs(dangerURLs);
-}
-function adminDeleteEntry(id){
+async function adminDeleteEntry(id){
   if(!isAdminMode){ alert('Вы не в режиме администратора.'); return; }
   if(!confirm('Удалить эту запись из базы?')) return;
-  dangerURLs=dangerURLs.filter(u=>u.id!==id);
-  saveDangerURLs(); renderDangerURLs(dangerURLs);
+  try{
+    await deleteDoc(doc(db,'dangerURLs',id));
+    loadAndRenderURLs(); loadLeaderboard();
+  } catch(e){ alert('Ошибка удаления: '+e.message); }
 }
 function adminToggleEdit(id){
   if(!isAdminMode) return;
   const form=document.getElementById('adm-form-'+id); if(!form) return;
   const opening=!form.classList.contains('open');
   document.querySelectorAll('.adm-edit-form.open').forEach(f=>f.classList.remove('open'));
-  if(opening){
-    form.classList.add('open');
-    const u=dangerURLs.find(x=>x.id===id); if(!u) return;
-    const ui=document.getElementById('adm-url-'+id);
-    const di=document.getElementById('adm-desc-'+id);
-    const ti=document.getElementById('adm-type-'+id);
-    if(ui) ui.value=u.url;
-    if(di) di.value=u.desc||'';
-    if(ti) ti.value=u.type;
-  }
+  if(opening) form.classList.add('open');
 }
-function adminSaveEdit(id){
+async function adminSaveEdit(id){
   if(!isAdminMode) return;
-  const u=dangerURLs.find(x=>x.id===id); if(!u) return;
   const ui=document.getElementById('adm-url-'+id);
   const di=document.getElementById('adm-desc-'+id);
   const ti=document.getElementById('adm-type-'+id);
   const newUrl=(ui?ui.value:'').trim();
   if(!newUrl){ alert('URL не может быть пустым.'); return; }
-  u.url=newUrl; u.desc=(di?di.value:'').trim(); u.type=ti?ti.value:'other';
-  saveDangerURLs();
-  const form=document.getElementById('adm-form-'+id); if(form) form.classList.remove('open');
-  renderDangerURLs(dangerURLs);
+  try{
+    await updateDoc(doc(db,'dangerURLs',id),{
+      url: newUrl,
+      desc: (di?di.value:'').trim(),
+      type: ti?ti.value:'other'
+    });
+    const form=document.getElementById('adm-form-'+id); if(form) form.classList.remove('open');
+    loadAndRenderURLs();
+  } catch(e){ alert('Ошибка сохранения: '+e.message); }
+}
+
+/* ═══════════════════════════════════════════════════════════
+   CURRENT USER STATE
+═══════════════════════════════════════════════════════════ */
+let currentUser = null;
+let currentUserData = null;
+
+onAuthStateChanged(auth, async (user) => {
+  currentUser = user;
+  if(user){
+    // load user profile from Firestore
+    const snap = await getDoc(doc(db,'users',user.uid));
+    currentUserData = snap.exists() ? snap.data() : null;
+    updateNavForUser(user);
+    updateProfilePanel(user, currentUserData);
+  } else {
+    currentUserData = null;
+    updateNavForUser(null);
+    updateProfilePanel(null, null);
+  }
+});
+
+function updateNavForUser(user){
+  const authBtns  = document.getElementById('navAuthBtns');
+  const userChip  = document.getElementById('navUserChip');
+  const userName  = document.getElementById('navUserName');
+  if(!authBtns||!userChip) return;
+  if(user){
+    authBtns.style.display  = 'none';
+    userChip.style.display  = 'flex';
+    if(userName) userName.textContent = user.displayName || user.email.split('@')[0];
+  } else {
+    authBtns.style.display  = 'flex';
+    userChip.style.display  = 'none';
+  }
+}
+
+function updateProfilePanel(user, data){
+  const panel = document.getElementById('profilePanel');
+  if(!panel) return;
+  if(!user){ panel.style.display='none'; return; }
+  panel.style.display='block';
+  const pName  = document.getElementById('profileName');
+  const pEmail = document.getElementById('profileEmail');
+  const pCount = document.getElementById('profileUrlCount');
+  const pScore = document.getElementById('profileScore');
+  if(pName)  pName.textContent  = user.displayName || user.email.split('@')[0];
+  if(pEmail) pEmail.textContent = user.email;
+  if(data){
+    if(pCount) pCount.textContent = data.urlsSubmitted || 0;
+    if(pScore) pScore.textContent = data.score || 0;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════
+   AUTH MODAL
+═══════════════════════════════════════════════════════════ */
+let authMode = 'login'; // 'login' | 'register'
+
+function openAuthModal(mode='login'){
+  authMode = mode;
+  const modal = document.getElementById('authModal');
+  if(!modal) return;
+  modal.classList.add('open');
+  switchAuthTab(mode);
+  setTimeout(()=>{ const f=document.getElementById('authEmail'); if(f) f.focus(); },80);
+}
+function closeAuthModal(){
+  const modal = document.getElementById('authModal');
+  if(modal) modal.classList.remove('open');
+  clearAuthError();
+}
+function switchAuthTab(mode){
+  authMode = mode;
+  document.querySelectorAll('.auth-tab').forEach(t=>t.classList.toggle('active', t.dataset.tab===mode));
+  document.getElementById('authLoginForm').style.display  = mode==='login'?'block':'none';
+  document.getElementById('authRegForm').style.display    = mode==='register'?'block':'none';
+  clearAuthError();
+}
+function showAuthError(msg){
+  const e=document.getElementById('authError'); if(e){ e.textContent=msg; e.style.display='block'; }
+}
+function clearAuthError(){
+  const e=document.getElementById('authError'); if(e){ e.textContent=''; e.style.display='none'; }
+}
+
+async function doLogin(){
+  const email = document.getElementById('loginEmail').value.trim();
+  const pass  = document.getElementById('loginPass').value;
+  if(!email||!pass){ showAuthError('Заполните все поля.'); return; }
+  const btn = document.getElementById('loginBtn');
+  btn.textContent='Вход...'; btn.disabled=true;
+  try{
+    await signInWithEmailAndPassword(auth, email, pass);
+    closeAuthModal();
+  } catch(e){
+    let msg = 'Ошибка входа.';
+    if(e.code==='auth/user-not-found'||e.code==='auth/wrong-password'||e.code==='auth/invalid-credential') msg='Неверный email или пароль.';
+    if(e.code==='auth/too-many-requests') msg='Слишком много попыток. Попробуйте позже.';
+    showAuthError(msg);
+  } finally { btn.textContent='Войти'; btn.disabled=false; }
+}
+
+async function doRegister(){
+  const name  = document.getElementById('regName').value.trim();
+  const email = document.getElementById('regEmail').value.trim();
+  const pass  = document.getElementById('regPass').value;
+  const pass2 = document.getElementById('regPass2').value;
+  if(!name||!email||!pass||!pass2){ showAuthError('Заполните все поля.'); return; }
+  if(pass!==pass2){ showAuthError('Пароли не совпадают.'); return; }
+  if(pass.length<6){ showAuthError('Пароль минимум 6 символов.'); return; }
+  if(name.length<2||name.length>30){ showAuthError('Имя: от 2 до 30 символов.'); return; }
+  const btn = document.getElementById('regBtn');
+  btn.textContent='Регистрация...'; btn.disabled=true;
+  try{
+    const cred = await createUserWithEmailAndPassword(auth, email, pass);
+    await updateProfile(cred.user, { displayName: name });
+    // Create user doc in Firestore
+    await setDoc(doc(db,'users',cred.user.uid),{
+      displayName: name,
+      email: email,
+      urlsSubmitted: 0,
+      confirmedThreats: 0,
+      score: 0,
+      createdAt: serverTimestamp()
+    });
+    // Create leaderboard entry
+    await setDoc(doc(db,'leaderboard',cred.user.uid),{
+      displayName: name,
+      score: 0,
+      urlsSubmitted: 0,
+      confirmedThreats: 0,
+      updatedAt: serverTimestamp()
+    });
+    closeAuthModal();
+  } catch(e){
+    let msg = 'Ошибка регистрации.';
+    if(e.code==='auth/email-already-in-use') msg='Этот email уже зарегистрирован.';
+    if(e.code==='auth/invalid-email') msg='Некорректный email.';
+    if(e.code==='auth/weak-password') msg='Пароль слишком простой.';
+    showAuthError(msg);
+  } finally { btn.textContent='Зарегистрироваться'; btn.disabled=false; }
+}
+
+async function doLogout(){
+  await signOut(auth);
+}
+
+/* ═══════════════════════════════════════════════════════════
+   GEMINI AI URL CHECK
+═══════════════════════════════════════════════════════════ */
+async function checkURLWithAI(url){
+  const prompt = `Ты — эксперт по кибербезопасности. Проанализируй следующий URL и определи, является ли он реальным опасным/фишинговым сайтом или выдуманным/безопасным.
+
+URL: ${url}
+
+Ответь ТОЛЬКО в формате JSON без лишнего текста:
+{
+  "isReal": true/false,
+  "isThreat": true/false,
+  "confidence": 0-100,
+  "threatType": "phishing"|"malware"|"scam"|"spam"|"safe"|"fake",
+  "reason": "краткое объяснение на русском (1-2 предложения)"
+}
+
+Правила оценки:
+- isReal: существует ли такой домен реально (не выдуман)
+- isThreat: является ли реальной угрозой
+- fake: URL похож на выдуманный или тестовый
+- confidence: уверенность в оценке от 0 до 100`;
+
+  try {
+    const resp = await fetch(
+      `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${GEMINI_KEY}`,
+      {
+        method: 'POST',
+        headers: {'Content-Type':'application/json'},
+        body: JSON.stringify({
+          contents:[{parts:[{text: prompt}]}],
+          generationConfig:{ temperature:0.1, maxOutputTokens:256 }
+        })
+      }
+    );
+    const data = await resp.json();
+    const text = data?.candidates?.[0]?.content?.parts?.[0]?.text || '';
+    const jsonMatch = text.match(/\{[\s\S]*\}/);
+    if(!jsonMatch) throw new Error('No JSON in response');
+    return JSON.parse(jsonMatch[0]);
+  } catch(e){
+    console.warn('Gemini error:', e);
+    return null;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════
+   DANGER URL DATABASE — FIRESTORE
+═══════════════════════════════════════════════════════════ */
+const BLOCKED_WORDS=['хуй','хуе','хуя','хуё','пизд','пиздец','ёбан','еба','еби','ебать','блядь','бляди','блять','сука','суки','мудак','мудил','залупа','долбоёб','долбоеб','шлюха','шлюхи','проститутк','нахуй','похуй','нахер','khuy','pizd','eban','ebat','blyad','suka','mudak','zalupa','fuck','shit','bitch','cunt','nigger','nigga','faggot','whore','slut','bastard','motherfuck','asshole','террор','взорв','убийц','nazi','нацист'];
+const BLOCKED_URL_PATTERNS=['porn','porno','xxx','sex','anal','nude','naked','nsfw','adult','erotic','hentai','fetish','webcam','onlyfans','brazzers','pornhub','xvideos','xnxx','redtube','youporn','chaturbate','порно','эротик','голая','интим'];
+const TRUSTED_DOMAINS=['google.com','google.ru','bing.com','yandex.ru','yandex.com','yahoo.com','duckduckgo.com','vk.com','ok.ru','facebook.com','instagram.com','twitter.com','x.com','tiktok.com','youtube.com','youtu.be','telegram.org','t.me','whatsapp.com','discord.com','discord.gg','reddit.com','pinterest.com','linkedin.com','snapchat.com','gmail.com','mail.ru','outlook.com','hotmail.com','protonmail.com','rambler.ru','amazon.com','wildberries.ru','ozon.ru','aliexpress.com','avito.ru','ebay.com','sberbank.ru','tbank.ru','vtb.ru','alfabank.ru','gosuslugi.ru','mos.ru','nalog.ru','cbr.ru','government.ru','kremlin.ru','microsoft.com','apple.com','github.com','gitlab.com','stackoverflow.com','cloudflare.com','virustotal.com','haveibeenpwned.com','kaspersky.com','drweb.com','rbc.ru','ria.ru','tass.ru','bbc.com','cnn.com','wikipedia.org','coursera.org','stepik.org'];
+
+function getDomain(input){ let s=input.trim().toLowerCase().replace(/^https?:\/\//i,''); return s.split('/')[0].split('?')[0].split('#')[0]; }
+function isTrustedDomain(d){ return TRUSTED_DOMAINS.some(t=>d===t||d.endsWith('.'+t)); }
+function isNSFWUrl(input){ const l=input.toLowerCase(); return BLOCKED_URL_PATTERNS.some(p=>l.includes(p)); }
+function isValidURL(input){
+  const s=input.trim();
+  if(/^[a-z]+:\/\//i.test(s)&&!/^https?:\/\//i.test(s)) return false;
+  const domain=getDomain(s);
+  return /^[a-zA-Z0-9]([a-zA-Z0-9\-]{0,61}[a-zA-Z0-9])?(\.[a-zA-Z0-9]([a-zA-Z0-9\-]{0,61}[a-zA-Z0-9])?)+$/.test(domain)&&domain.length>=4&&domain.length<=200;
+}
+function normalizeURL(input){ let u=input.trim(); if(!/^https?:\/\//i.test(u)) u='http://'+u; return u; }
+function containsBlockedWords(text){ const l=text.toLowerCase(); return BLOCKED_WORDS.some(w=>l.includes(w)); }
+function escapeHtml(s){ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+function formatDate(d){ if(!d) return '—'; const dt=d.toDate?d.toDate():new Date(d); return dt.toLocaleDateString('ru-RU',{day:'2-digit',month:'short',year:'numeric'}); }
+function showValidationError(msg){ const el=document.getElementById('durlValidationError'); if(el){ el.textContent=msg; el.style.display='block'; setTimeout(()=>{ el.style.display='none'; },6000); } }
+function updateDescCounter(){ const ta=document.getElementById('durlDesc'),c=document.getElementById('descCounter'); if(ta&&c) c.textContent=ta.value.length+'/300'; }
+
+let durlTermsAccepted=false;
+try{ durlTermsAccepted=localStorage.getItem('cg_durl_terms')==='yes'; }catch(e){}
+const durlObserver=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{ if(e.isIntersecting&&!durlTermsAccepted){ document.getElementById('durlModal').style.display='flex'; durlObserver.disconnect(); } });
+},{threshold:.2});
+function acceptDurlTerms(){ durlTermsAccepted=true; try{ localStorage.setItem('cg_durl_terms','yes'); }catch(e){} document.getElementById('durlModal').style.display='none'; }
+
+async function submitDangerURL(){
+  if(!currentUser){ openAuthModal('login'); showValidationError('⛔ Для добавления ссылок необходимо войти в аккаунт.'); return; }
+  const rawInput=(document.getElementById('durlInput').value||'').trim();
+  const type=document.getElementById('durlType').value;
+  const desc=(document.getElementById('durlDesc').value||'').trim();
+
+  if(!rawInput){ showValidationError('⛔ Введите URL-адрес.'); return; }
+  if(/^[a-z]+:\/\//i.test(rawInput)&&!/^https?:\/\//i.test(rawInput)){ showValidationError('⛔ Некорректный протокол. Используйте https:// или просто домен.'); return; }
+  if(!isValidURL(rawInput)){ showValidationError('⛔ Некорректный адрес. Введите домен: example.com'); return; }
+  const domain=getDomain(rawInput);
+  if(isNSFWUrl(rawInput)||isNSFWUrl(domain)){ showValidationError('⛔ Сайты для взрослых не принимаются.'); return; }
+  if(desc&&containsBlockedWords(desc)){ showValidationError('⛔ Описание содержит недопустимые слова.'); return; }
+  if(isTrustedDomain(domain)){ showValidationError(`⛔ Домен «${domain}» — проверенный ресурс, не может быть добавлен.`); return; }
+  if(desc.length>300){ showValidationError('⛔ Описание слишком длинное (макс. 300 символов).'); return; }
+  if(/https?:\/\/[^\s]+/.test(desc)){ showValidationError('⛔ Не вставляйте ссылки в описание.'); return; }
+  if(desc.length>0&&desc.length<10){ showValidationError('⛔ Описание слишком короткое (мин. 10 символов).'); return; }
+
+  const url=normalizeURL(rawInput);
+
+  // Check duplicate in Firestore
+  const existing=await getDocs(query(collection(db,'dangerURLs'),where('domain','==',domain)));
+  if(!existing.empty){ showValidationError('⛔ Этот домен уже есть в базе.'); return; }
+
+  // AI check
+  const submitBtn=document.getElementById('durlSubmitBtn');
+  if(submitBtn){ submitBtn.disabled=true; submitBtn.textContent='🤖 AI проверяет...'; }
+
+  const aiResult = await checkURLWithAI(url);
+
+  if(submitBtn){ submitBtn.disabled=false; submitBtn.textContent='🚨 Добавить в базу'; }
+
+  // Reject fake/invented URLs
+  if(aiResult && aiResult.threatType==='fake' && aiResult.confidence>60){
+    showValidationError('⛔ AI определил, что этот URL похож на выдуманный или несуществующий. Добавляйте только реальные угрозы.');
+    showAIResult(aiResult, false);
+    return;
+  }
+  if(aiResult && !aiResult.isThreat && aiResult.threatType==='safe' && aiResult.confidence>70){
+    showValidationError(`⛔ AI считает этот сайт безопасным (уверенность ${aiResult.confidence}%): ${aiResult.reason}`);
+    showAIResult(aiResult, false);
+    return;
+  }
+
+  const isConfirmedThreat = aiResult ? (aiResult.isThreat && aiResult.confidence>=50) : false;
+  const scorePoints = isConfirmedThreat ? 10 : 2;
+
+  try{
+    await addDoc(collection(db,'dangerURLs'),{
+      url, domain, type, desc,
+      authorId:   currentUser.uid,
+      authorName: currentUser.displayName || currentUser.email.split('@')[0],
+      votes:      1,
+      voters:     [currentUser.uid],
+      aiVerified: aiResult!==null,
+      aiResult:   aiResult||null,
+      isConfirmedThreat,
+      createdAt:  serverTimestamp()
+    });
+
+    // Update user stats
+    await updateDoc(doc(db,'users',currentUser.uid),{
+      urlsSubmitted:   increment(1),
+      confirmedThreats: increment(isConfirmedThreat?1:0),
+      score:           increment(scorePoints)
+    });
+    // Update leaderboard
+    await setDoc(doc(db,'leaderboard',currentUser.uid),{
+      displayName:      currentUser.displayName || currentUser.email.split('@')[0],
+      score:            increment(scorePoints),
+      urlsSubmitted:    increment(1),
+      confirmedThreats: increment(isConfirmedThreat?1:0),
+      updatedAt:        serverTimestamp()
+    },{merge:true});
+
+    document.getElementById('durlInput').value='';
+    document.getElementById('durlDesc').value='';
+    document.getElementById('durlSearch').value='';
+    document.getElementById('durlValidationError').style.display='none';
+    updateDescCounter();
+
+    const s=document.getElementById('durlSuccess');
+    if(s){
+      s.className='durls-success show'; s.style.cssText='';
+      const aiTag = isConfirmedThreat ? ' 🤖 AI подтвердил угрозу! +10 очков' : ' 🤖 AI не подтвердил как угрозу. +2 очка';
+      s.innerHTML=`✅ Ссылка добавлена!${aiResult?aiTag:''}`;
+      setTimeout(()=>{ s.className='durls-success'; },5000);
+    }
+
+    if(aiResult) showAIResult(aiResult, true);
+    loadAndRenderURLs();
+    loadLeaderboard();
+
+    // Refresh user data
+    const snap=await getDoc(doc(db,'users',currentUser.uid));
+    currentUserData=snap.data();
+    updateProfilePanel(currentUser,currentUserData);
+
+  } catch(e){ showValidationError('⛔ Ошибка при добавлении: '+e.message); }
+}
+
+function showAIResult(ai, added){
+  const box=document.getElementById('aiResultBox');
+  if(!box) return;
+  const icons={phishing:'🎣',malware:'🦠',scam:'💸',spam:'📧',safe:'✅',fake:'❓'};
+  const cls=ai.isThreat?'danger':ai.threatType==='fake'?'warning':'safe';
+  box.className='ai-result-box '+cls;
+  box.innerHTML=`
+    <div class="ai-result-header">
+      <span>${icons[ai.threatType]||'🤖'} <strong>AI Gemini</strong> — ${ai.isThreat?'Угроза обнаружена':'Угроза не подтверждена'}</span>
+      <span class="ai-conf">Уверенность: ${ai.confidence}%</span>
+    </div>
+    <div class="ai-result-reason">${escapeHtml(ai.reason)}</div>
+    <div class="ai-result-meta">
+      Тип: <strong>${ai.threatType}</strong> · 
+      Реальный URL: <strong>${ai.isReal?'Да':'Нет/Неизвестно'}</strong> · 
+      Угроза: <strong style="color:${ai.isThreat?'var(--red)':'var(--green)'}">${ai.isThreat?'Да':'Нет'}</strong>
+    </div>`;
+}
+
+async function loadAndRenderURLs(){
+  const el=document.getElementById('durlList');
+  const countEl=document.getElementById('durlCount');
+  if(!el) return;
+  el.innerHTML='<div class="durls-empty" style="color:var(--muted)">⏳ Загрузка...</div>';
+
+  try{
+    const q=query(collection(db,'dangerURLs'),orderBy('votes','desc'));
+    const snap=await getDocs(q);
+    const urls=[];
+    snap.forEach(d=>urls.push({id:d.id,...d.data()}));
+
+    if(countEl) countEl.textContent=`${urls.length} ${urls.length===1?'запись':urls.length<5?'записи':'записей'}`;
+
+    if(!urls.length){
+      el.innerHTML=`<div class="durls-empty">Записей нет. Будьте первым!</div>`;
+      return;
+    }
+
+    el.innerHTML='';
+    if(isAdminMode) el.classList.add('admin-mode'); else el.classList.remove('admin-mode');
+
+    const typeLabels={phishing:'Фишинг',malware:'Вредоносное ПО',scam:'Мошенничество',spam:'Спам',other:'Другое'};
+    const typeOpts=Object.entries(typeLabels).map(([v,l])=>`<option value="${v}">${l}</option>`).join('');
+    const myVotes=JSON.parse(localStorage.getItem('cg_votes')||'{}');
+
+    urls.forEach(u=>{
+      const div=document.createElement('div');
+      div.className='durl-item';
+      const voted=myVotes[u.id]||(u.voters&&currentUser&&u.voters.includes(currentUser.uid));
+      const aiTag=u.aiVerified?(u.isConfirmedThreat
+        ?'<span class="ai-tag threat">🤖 AI: Угроза</span>'
+        :'<span class="ai-tag safe">🤖 AI: Безопасен</span>')
+        :'<span class="ai-tag unknown">🤖 AI: Не проверен</span>';
+
+      const adminCtrl=isAdminMode?`
+        <div class="adm-controls">
+          <button class="adm-edit-btn" onclick="adminToggleEdit('${u.id}')">✏️ Редактировать</button>
+          <button class="adm-del" onclick="adminDeleteEntry('${u.id}')">🗑 Удалить</button>
+        </div>
+        <div class="adm-edit-form" id="adm-form-${u.id}">
+          <input class="adm-ei" id="adm-url-${u.id}" type="text" value="${escapeHtml(u.url)}" placeholder="URL"/>
+          <select class="adm-sel" id="adm-type-${u.id}">${typeOpts}</select>
+          <textarea class="adm-ta" id="adm-desc-${u.id}" placeholder="Описание...">${escapeHtml(u.desc||'')}</textarea>
+          <div class="adm-row">
+            <button class="adm-save" onclick="adminSaveEdit('${u.id}')">💾 Сохранить</button>
+            <button class="adm-cancel" onclick="adminToggleEdit('${u.id}')">Отмена</button>
+          </div>
+        </div>`:'';
+
+      div.innerHTML=`
+        <span class="durl-badge ${u.type}">${typeLabels[u.type]||'Другое'}</span>
+        <div class="durl-body">
+          <div class="durl-url">⛔ <span style="user-select:all;cursor:text;">${escapeHtml(u.url)}</span></div>
+          ${u.desc?`<div class="durl-desc">${escapeHtml(u.desc)}</div>`:''}
+          <div class="durl-meta">
+            <span>📅 ${formatDate(u.createdAt)}</span>
+            <span>👤 ${escapeHtml(u.authorName||'Аноним')}</span>
+            <span style="color:#FF3B5C;font-weight:600;">⛔ Не переходите</span>
+            ${aiTag}
+          </div>
+          ${adminCtrl}
+        </div>
+        <div class="durl-votes">
+          <button class="vote-btn${voted?' voted':''}" onclick="voteURL('${u.id}',this)" title="Подтвердить угрозу">
+            ${voted?'🔴':'⚠️'}
+          </button>
+          <span class="vote-count" id="vc_${u.id}">${u.votes||0}</span>
+        </div>`;
+      el.appendChild(div);
+    });
+  } catch(e){
+    el.innerHTML=`<div class="durls-empty">Ошибка загрузки: ${e.message}</div>`;
+  }
+}
+
+async function voteURL(id, btn){
+  if(!currentUser){ openAuthModal('login'); return; }
+  const myVotes=JSON.parse(localStorage.getItem('cg_votes')||'{}');
+  if(myVotes[id]||btn.classList.contains('voted')) return;
+  myVotes[id]=true; localStorage.setItem('cg_votes',JSON.stringify(myVotes));
+  btn.classList.add('voted'); btn.textContent='🔴';
+  const vc=document.getElementById('vc_'+id);
+  try{
+    await updateDoc(doc(db,'dangerURLs',id),{ votes:increment(1), voters:arrayUnion(currentUser.uid) });
+    if(vc){ vc.textContent=parseInt(vc.textContent||'0')+1; }
+  } catch(e){ console.warn('Vote error:',e); }
+}
+
+async function searchDangerURLs(){
+  const q=(document.getElementById('durlSearch').value||'').toLowerCase().trim();
+  const resultEl=document.getElementById('durlCheckResult');
+  if(!q){ if(resultEl) resultEl.className='durls-check-result'; loadAndRenderURLs(); return; }
+
+  const qDomain=getDomain(q.startsWith('http')?q:'http://'+q);
+  if(isTrustedDomain(qDomain)){
+    if(resultEl){ resultEl.className='durls-check-result notfound show'; resultEl.innerHTML=`✅ <strong>${escapeHtml(qDomain)}</strong> — проверенный и надёжный сайт.`; }
+    document.getElementById('durlList').innerHTML='<div class="durls-empty">Безопасный сайт.</div>';
+    return;
+  }
+
+  // Search in Firestore
+  const snap=await getDocs(collection(db,'dangerURLs'));
+  const matches=[];
+  snap.forEach(d=>{ const u={id:d.id,...d.data()}; if(u.url.toLowerCase().includes(q)||(u.desc||'').toLowerCase().includes(q)) matches.push(u); });
+
+  if(resultEl){
+    if(matches.length>0){ resultEl.className='durls-check-result found show'; resultEl.innerHTML=`🚨 <strong>Внимание!</strong> Найдено совпадений: ${matches.length}. <strong>Не переходите.</strong>`; }
+    else { resultEl.className='durls-check-result notfound show'; resultEl.textContent='✅ В нашей базе не числится. Проверьте через VirusTotal.'; }
+  }
+
+  const el=document.getElementById('durlList');
+  const countEl=document.getElementById('durlCount');
+  if(countEl) countEl.textContent=`${matches.length} совпадений`;
+  if(!el) return;
+  el.innerHTML='';
+  const typeLabels={phishing:'Фишинг',malware:'Вредоносное ПО',scam:'Мошенничество',spam:'Спам',other:'Другое'};
+  const myVotes=JSON.parse(localStorage.getItem('cg_votes')||'{}');
+  matches.sort((a,b)=>(b.votes||0)-(a.votes||0)).forEach(u=>{
+    const div=document.createElement('div'); div.className='durl-item';
+    const voted=myVotes[u.id]||(u.voters&&currentUser&&u.voters.includes(currentUser.uid));
+    const aiTag=u.aiVerified?(u.isConfirmedThreat?'<span class="ai-tag threat">🤖 AI: Угроза</span>':'<span class="ai-tag safe">🤖 AI: Безопасен</span>'):'<span class="ai-tag unknown">🤖 AI: Не проверен</span>';
+    div.innerHTML=`
+      <span class="durl-badge ${u.type}">${typeLabels[u.type]||'Другое'}</span>
+      <div class="durl-body">
+        <div class="durl-url">⛔ <span style="user-select:all;cursor:text;">${escapeHtml(u.url)}</span></div>
+        ${u.desc?`<div class="durl-desc">${escapeHtml(u.desc)}</div>`:''}
+        <div class="durl-meta"><span>📅 ${formatDate(u.createdAt)}</span><span>👤 ${escapeHtml(u.authorName||'Аноним')}</span><span style="color:#FF3B5C;font-weight:600;">⛔ Не переходите</span>${aiTag}</div>
+      </div>
+      <div class="durl-votes"><button class="vote-btn${voted?' voted':''}" onclick="voteURL('${u.id}',this)">${voted?'🔴':'⚠️'}</button><span class="vote-count" id="vc_${u.id}">${u.votes||0}</span></div>`;
+    el.appendChild(div);
+  });
+}
+
+/* ═══════════════════════════════════════════════════════════
+   LEADERBOARD
+═══════════════════════════════════════════════════════════ */
+async function loadLeaderboard(){
+  const el=document.getElementById('leaderboardList');
+  if(!el) return;
+  el.innerHTML='<div style="text-align:center;padding:24px;color:var(--muted)">⏳ Загрузка...</div>';
+  try{
+    const q=query(collection(db,'leaderboard'),orderBy('score','desc'),limit(10));
+    const snap=await getDocs(q);
+    const entries=[];
+    snap.forEach(d=>entries.push({id:d.id,...d.data()}));
+    if(!entries.length){ el.innerHTML='<div style="text-align:center;padding:24px;color:var(--muted)">Пока никто не участвует. Будьте первым!</div>'; return; }
+    const medals=['🥇','🥈','🥉'];
+    el.innerHTML=entries.map((e,i)=>`
+      <div class="lb-item${currentUser&&e.id===currentUser.uid?' lb-me':''}">
+        <div class="lb-rank">${medals[i]||`#${i+1}`}</div>
+        <div class="lb-user">
+          <div class="lb-name">${escapeHtml(e.displayName||'Пользователь')}</div>
+          <div class="lb-stats">${e.urlsSubmitted||0} ссылок · ${e.confirmedThreats||0} подтверждено AI</div>
+        </div>
+        <div class="lb-score">${e.score||0} <span style="font-size:.7rem;color:var(--muted)">очков</span></div>
+      </div>`).join('');
+  } catch(e){ el.innerHTML=`<div style="text-align:center;padding:24px;color:var(--muted)">Ошибка: ${e.message}</div>`; }
 }
 
 /* ═══════════════════════════════════════════════════════════
@@ -1438,77 +2043,67 @@ const GLOSSARY=[
   {term:'Социальная инженерия',def:'Манипуляция людьми для получения конфиденциальной информации.',cat:'Атаки'},
   {term:'Криптоджекинг',def:'Несанкционированное использование чужого устройства для майнинга криптовалюты.',cat:'Вредоносное ПО'},
   {term:'Патч',def:'Обновление, устраняющее уязвимость или исправляющее ошибку в программе.',cat:'Защита'},
-  {term:'Darknet',def:'Часть интернета, доступная только через специальные сети (Tor), не индексируется.',cat:'Инфра'},
+  {term:'Darknet',def:'Часть интернета, доступная только через специальные сети (Tor).',cat:'Инфра'},
   {term:'Botnet',def:'Сеть заражённых устройств, управляемых злоумышленником удалённо.',cat:'Инфра'},
-  {term:'CVE',def:'Стандартная база данных публично известных уязвимостей и угроз.',cat:'Инфра'},
-  {term:'End-to-End шифрование',def:'Данные зашифрованы на стороне отправителя и расшифровываются только получателем.',cat:'Защита'},
-  {term:'Honeypot',def:'Ловушка-приманка для хакеров: имитирует уязвимую систему для изучения атак.',cat:'Защита'},
-  {term:'OSINT',def:'Разведка на основе открытых источников — сбор информации из публичных данных.',cat:'Инфра'},
-  {term:'Payload',def:'Вредоносная нагрузка — часть кода, которая непосредственно причиняет вред.',cat:'Вредоносное ПО'},
-  {term:'HTTPS',def:'Защищённый HTTP с TLS-шифрованием — безопасный протокол передачи данных.',cat:'Защита'},
-  {term:'Уязвимость',def:'Слабое место в программе или системе, которое может быть использовано для атаки.',cat:'Уязвимости'},
-  {term:'Вектор атаки',def:'Способ или путь, по которому злоумышленник проникает в систему.',cat:'Атаки'},
-  {term:'Инцидент',def:'Подтверждённое или подозреваемое нарушение безопасности информационной системы.',cat:'Инфра'},
-  {term:'Хэш',def:'Уникальный цифровой отпечаток файла, используемый для проверки целостности.',cat:'Защита'},
-  {term:'Экслойт',def:'Программа или команда, использующая уязвимость для получения контроля над системой.',cat:'Атаки'},
-  {term:'Аудит безопасности',def:'Систематическая оценка защищённости системы по стандартам и политикам.',cat:'Защита'},
+  {term:'CVE',def:'Стандартная база данных публично известных уязвимостей.',cat:'Инфра'},
+  {term:'End-to-End шифрование',def:'Данные шифруются у отправителя и расшифровываются только получателем.',cat:'Защита'},
+  {term:'Honeypot',def:'Ловушка для хакеров: имитирует уязвимую систему.',cat:'Защита'},
+  {term:'OSINT',def:'Разведка на основе открытых источников.',cat:'Инфра'},
+  {term:'Payload',def:'Вредоносная нагрузка — часть кода, причиняющая вред.',cat:'Вредоносное ПО'},
+  {term:'HTTPS',def:'Защищённый HTTP с TLS-шифрованием.',cat:'Защита'},
+  {term:'Уязвимость',def:'Слабое место в программе, используемое для атаки.',cat:'Уязвимости'},
+  {term:'Вектор атаки',def:'Путь, по которому злоумышленник проникает в систему.',cat:'Атаки'},
+  {term:'Инцидент',def:'Подтверждённое нарушение безопасности информационной системы.',cat:'Инфра'},
+  {term:'Хэш',def:'Цифровой отпечаток файла для проверки целостности.',cat:'Защита'},
+  {term:'Экслойт',def:'Программа, использующая уязвимость для захвата контроля.',cat:'Атаки'},
+  {term:'Аудит безопасности',def:'Систематическая оценка защищённости системы.',cat:'Защита'},
 ];
 
 const FAQS=[
-  {q:'Как определить, что мне пришло фишинговое письмо?',a:'Обратите внимание на адрес отправителя — он может быть похож на настоящий, но с ошибкой в домене. Фишинговые письма обычно создают срочность ("заблокировано!", "срочно!"), содержат ссылки на подозрительные сайты и просят ввести личные данные. Наведите мышь на ссылку, не кликая, и посмотрите реальный адрес в строке статуса браузера.'},
-  {q:'Что делать, если я случайно перешёл по подозрительной ссылке?',a:'Немедленно закройте вкладку и не вводите никаких данных. Запустите антивирусную проверку системы. Если вы успели ввести пароль — сразу же его смените на всех сервисах, где используется такой же. Включите двухфакторную аутентификацию на важных аккаунтах.'},
-  {q:'Какие файлы считаются наиболее опасными?',a:'Исполняемые файлы: .exe, .bat, .cmd, .com, .vbs, .ps1, .msi. Также опасны офисные документы с макросами (.docm, .xlsm), архивы с паролем, файлы .js, .jar и .hta. Любой файл из непроверенного источника следует проверять через VirusTotal перед открытием.'},
-  {q:'Нужен ли антивирус в 2026 году?',a:'Да, хотя встроенный Windows Defender сейчас весьма эффективен. Важнее антивируса — своевременные обновления ОС и ПО, двухфакторная аутентификация и здравый смысл при работе с незнакомыми файлами и ссылками.'},
-  {q:'Как создать надёжный пароль и не забыть его?',a:'Используйте менеджер паролей — Bitwarden (бесплатный), 1Password или KeePassXC. Он создаёт уникальные сложные пароли для каждого сайта и хранит их зашифрованными. Вам нужно запомнить лишь один мастер-пароль.'},
-  {q:'Что такое двухфакторная аутентификация и зачем она нужна?',a:'2FA — это второй шаг при входе в аккаунт помимо пароля: одноразовый код из приложения (Google Authenticator, Aegis) или SMS. Даже если злоумышленник узнает ваш пароль, без второго фактора войти он не сможет.'},
+  {q:'Как определить фишинговое письмо?',a:'Обратите внимание на адрес отправителя — он может быть похож на настоящий, но с ошибкой. Фишинг создаёт срочность, содержит ссылки на подозрительные сайты и просит ввести личные данные. Наведите мышь на ссылку и посмотрите реальный адрес.'},
+  {q:'Что делать, если перешёл по подозрительной ссылке?',a:'Закройте вкладку, не вводите данных. Запустите антивирус. Если ввели пароль — смените его везде. Включите 2FA на важных аккаунтах.'},
+  {q:'Какие файлы наиболее опасны?',a:'.exe, .bat, .cmd, .vbs, .ps1, .msi, .jar, .hta. Также опасны документы с макросами (.docm, .xlsm) и архивы с паролем. Проверяйте через VirusTotal.'},
+  {q:'Нужен ли антивирус в 2026 году?',a:'Да. Windows Defender эффективен, но главное — обновления ОС, 2FA и осторожность с файлами из ненадёжных источников.'},
+  {q:'Как создать надёжный пароль?',a:'Используйте менеджер паролей — Bitwarden (бесплатный) или 1Password. Он создаёт уникальные пароли для каждого сайта. Запомните один мастер-пароль.'},
+  {q:'Что такое 2FA и зачем она нужна?',a:'Второй шаг при входе — код из приложения (Google Authenticator, Aegis) или SMS. Даже зная пароль, злоумышленник не войдёт без второго фактора.'},
 ];
 
 /* ═══════════════════════════════════════════════════════════
-   STATE
+   STATE & CHECKLISTS
 ═══════════════════════════════════════════════════════════ */
 let savedState={};
 try{ savedState=JSON.parse(localStorage.getItem('cg_state')||'{}'); }catch(e){}
 function saveState(){ try{ localStorage.setItem('cg_state',JSON.stringify(savedState)); }catch(e){} }
 
-/* ═══════════════════════════════════════════════════════════
-   CHECKLISTS RENDER
-═══════════════════════════════════════════════════════════ */
 function renderChecklists(){
-  const grid=document.getElementById('checklistGrid');
-  if(!grid) return;
+  const grid=document.getElementById('checklistGrid'); if(!grid) return;
   grid.innerHTML='';
   CHECKLISTS.forEach(cl=>{
     if(!savedState[cl.id]) savedState[cl.id]={};
-    const total=cl.items.length;
-    const done=Object.values(savedState[cl.id]).filter(Boolean).length;
-    const pct=Math.round(done/total*100);
-    const r=18,c=2*Math.PI*r,offset=c-(pct/100)*c;
-    const card=document.createElement('div');
-    card.className='checklist-card fade-up';
+    const total=cl.items.length,done=Object.values(savedState[cl.id]).filter(Boolean).length;
+    const pct=Math.round(done/total*100),r=18,c=2*Math.PI*r,offset=c-(pct/100)*c;
+    const card=document.createElement('div'); card.className='checklist-card fade-up';
     card.innerHTML=`
       <div class="card-head">
         <div class="card-icon ${cl.iconClass}">${cl.icon}</div>
         <div class="progress-ring-wrap" title="${pct}% выполнено">
           <svg class="progress-ring" width="44" height="44" viewBox="0 0 44 44">
             <circle cx="22" cy="22" r="${r}" fill="none" stroke="var(--bg4)" stroke-width="3"/>
-            <circle cx="22" cy="22" r="${r}" fill="none" stroke="var(--cyan)" stroke-width="3"
-              stroke-dasharray="${c}" stroke-dashoffset="${offset}" stroke-linecap="round"/>
+            <circle cx="22" cy="22" r="${r}" fill="none" stroke="var(--cyan)" stroke-width="3" stroke-dasharray="${c}" stroke-dashoffset="${offset}" stroke-linecap="round"/>
           </svg>
           <div class="progress-pct">${pct}%</div>
         </div>
       </div>
       <div class="card-title">${cl.title}</div>
       <div class="card-desc">${cl.desc}</div>
-      <ul class="checklist-items">
-        ${cl.items.map((item,i)=>`
-          <li class="cl-item${savedState[cl.id][i]?' done':''}" data-cl="${cl.id}" data-i="${i}">
-            <div class="cl-checkbox"><span class="cl-check-icon">✓</span></div>
-            <span class="cl-text">${item.text}</span>
-            <span class="cl-badge ${item.badge}">${item.badge==='high'?'Высокий':item.badge==='med'?'Средний':'Низкий'}</span>
-          </li>`).join('')}
-      </ul>
+      <ul class="checklist-items">${cl.items.map((item,i)=>`
+        <li class="cl-item${savedState[cl.id][i]?' done':''}" data-cl="${cl.id}" data-i="${i}">
+          <div class="cl-checkbox"><span class="cl-check-icon">✓</span></div>
+          <span class="cl-text">${item.text}</span>
+          <span class="cl-badge ${item.badge}">${item.badge==='high'?'Высокий':item.badge==='med'?'Средний':'Низкий'}</span>
+        </li>`).join('')}</ul>
       <div class="card-footer">
-        <div class="card-score">Выполнено: <span>${done}/${total}</span></div>
+        <div class="card-score">Отмечено: <span>${done}/${total}</span></div>
         <button class="reset-btn" onclick="resetChecklist('${cl.id}')">↺ Сбросить</button>
       </div>`;
     grid.appendChild(card);
@@ -1523,355 +2118,58 @@ function renderChecklists(){
 }
 function resetChecklist(id){ savedState[id]={}; saveState(); renderChecklists(); updateMeter(); observeFadeUps(); }
 
-/* ═══════════════════════════════════════════════════════════
-   THREAT METER
-═══════════════════════════════════════════════════════════ */
-const ACTION_ITEMS=[
-  {label:'Фишинговые письма',id:'phishing'},
-  {label:'Вредоносное ПО',id:'malware'},
-  {label:'Уязвимости сети',id:'network'},
-  {label:'Уязвимости аккаунтов',id:'accounts'},
-];
+const ACTION_ITEMS=[{label:'Фишинговые письма',id:'phishing'},{label:'Вредоносное ПО',id:'malware'},{label:'Уязвимости сети',id:'network'},{label:'Уязвимости аккаунтов',id:'accounts'}];
+
 function updateMeter(){
   let totalDone=0,totalItems=0;
   CHECKLISTS.forEach(cl=>{ totalItems+=cl.items.length; totalDone+=Object.values(savedState[cl.id]||{}).filter(Boolean).length; });
   const pct=totalItems>0?Math.round(totalDone/totalItems*100):0;
-  const fill=document.getElementById('meterFill');
-  const val=document.getElementById('meterValue');
-  const stat=document.getElementById('meterStatus');
+  const fill=document.getElementById('meterFill'),val=document.getElementById('meterValue'),stat=document.getElementById('meterStatus');
   if(fill) fill.style.width=pct+'%';
-  if(val) val.textContent=pct+'%';
-  if(pct===0){ if(val) val.style.color='var(--green)'; if(stat){ stat.className='meter-status safe'; stat.textContent='Угроз не обнаружено'; } }
-  else if(pct<30){ if(val) val.style.color='var(--green)'; if(stat){ stat.className='meter-status safe'; stat.textContent='Незначительный уровень угрозы'; } }
-  else if(pct<65){ if(val) val.style.color='var(--amber)'; if(stat){ stat.className='meter-status warn'; stat.textContent='Есть уязвимые места — нужна защита'; } }
-  else { if(val) val.style.color='var(--red)'; if(stat){ stat.className='meter-status danger'; stat.textContent='Требуется срочная защита!'; } }
+  if(val){ val.textContent=pct+'%'; val.style.color=pct===0?'var(--green)':pct<30?'var(--green)':pct<65?'var(--amber)':'var(--red)'; }
+  if(stat){ stat.className='meter-status '+(pct===0?'safe':pct<30?'safe':pct<65?'warn':'danger'); stat.textContent=pct===0?'Угроз не обнаружено':pct<30?'Незначительный уровень угрозы':pct<65?'Есть уязвимые места — нужна защита':'Требуется срочная защита!'; }
   const list=document.getElementById('actionList');
   if(list) list.innerHTML=ACTION_ITEMS.map(ai=>{
-    const cl=CHECKLISTS.find(c=>c.id===ai.id);
-    const tot=cl.items.length;
-    const dn=Object.values(savedState[ai.id]||{}).filter(Boolean).length;
-    const p=Math.round(dn/tot*100);
-    const dotCls=p===0?'ai-ok':p<=40?'ai-warn':'ai-bad';
-    const statusText=p===0?'✓ Защищено':p<100?`⚠ ${p}% угроз`:'🚨 Критично';
-    return `<div class="action-item"><div class="ai-dot ${dotCls}"></div><span style="font-size:.85rem">${ai.label}</span><span class="ai-status" style="color:${p===0?'var(--green)':p<=40?'var(--amber)':'var(--red)'}">${statusText}</span></div>`;
+    const cl=CHECKLISTS.find(c=>c.id===ai.id),tot=cl.items.length;
+    const dn=Object.values(savedState[ai.id]||{}).filter(Boolean).length,p=Math.round(dn/tot*100);
+    return `<div class="action-item"><div class="ai-dot ${p===0?'ai-ok':p<=40?'ai-warn':'ai-bad'}"></div><span style="font-size:.85rem">${ai.label}</span><span class="ai-status" style="color:${p===0?'var(--green)':p<=40?'var(--amber)':'var(--red)'}">${p===0?'✓ Защищено':p<100?`⚠ ${p}% угроз`:'🚨 Критично'}</span></div>`;
   }).join('');
 }
 
 /* ═══════════════════════════════════════════════════════════
    ANALYZER
 ═══════════════════════════════════════════════════════════ */
-function scanAnimation(barId,animId,cb){
-  const anim=document.getElementById(animId),fill=document.getElementById(barId);
-  if(!anim||!fill) return;
-  anim.classList.add('show'); fill.style.width='0%';
-  let p=0;
-  const iv=setInterval(()=>{ p+=Math.random()*18+4; if(p>=100){ p=100; clearInterval(iv); setTimeout(()=>{ anim.classList.remove('show'); fill.style.width='0%'; cb(); },200); } fill.style.width=p+'%'; },80);
-}
-function showResult(boxId,cls,icon,title,checks,indicators){
-  const box=document.getElementById(boxId); if(!box) return;
-  box.className='result-box show '+cls;
-  box.innerHTML=`<div class="result-header"><span class="result-icon">${icon}</span><span>${title}</span></div>
-    <ul class="result-list">${checks.map(c=>`<li><span class="ri">${c.ok?'✅':'⚠️'}</span><span>${c.text}</span></li>`).join('')}</ul>
-    <div class="check-indicators">${indicators.map(ind=>`<div class="indicator"><div class="ind-dot ${ind.cls}"></div><span>${ind.label}</span></div>`).join('')}</div>`;
-}
-function analyzeURL(){
-  const raw=document.getElementById('urlInput').value.trim();
-  if(!raw){ document.getElementById('urlInput').focus(); return; }
-  document.getElementById('urlResult').className='result-box';
-  scanAnimation('scanFill','scanAnim',()=>{
-    let url; try{ url=new URL(raw.startsWith('http')?raw:'https://'+raw); }catch{ url={hostname:raw,protocol:'http:',pathname:'/',search:''}; }
-    const host=url.hostname.toLowerCase(),path=(url.pathname||'')+(url.search||'');
-    const isSafe=url.protocol==='https:',hasIP=/\d{1,3}(\.\d{1,3}){3}/.test(host),longSub=host.split('.').length>4;
-    const suspWords=/verify|secure|login|account|update|confirm|paypal|bank|ebay|amazon|google/.test(host)&&!['google.com','amazon.com','paypal.com'].includes(host);
-    const suspExt=/\.(tk|ml|ga|cf|gq|xyz|top|click|link)$/.test(host),longPath=path.length>150,hasRedir=/redirect|redir|url=|goto=|forward/.test(path.toLowerCase());
-    const riskCount=[!isSafe,hasIP,longSub,suspWords,suspExt,longPath,hasRedir].filter(Boolean).length;
-    const cls=riskCount===0?'safe':riskCount<=2?'warning':'danger';
-    showResult('urlResult',cls,riskCount===0?'✅':riskCount<=2?'⚠️':'🚨',
-      riskCount===0?'Ссылка выглядит безопасно':riskCount<=2?'Обнаружены подозрительные признаки':'Высокий риск — не переходите!',
-      [{ok:isSafe,text:isSafe?'Протокол HTTPS — соединение зашифровано':'Отсутствует HTTPS'},
-       {ok:!hasIP,text:hasIP?'IP-адрес вместо домена — признак атаки':'Используется доменное имя'},
-       {ok:!longSub,text:longSub?'Слишком много поддоменов — маскировка':'Структура домена нормальная'},
-       {ok:!suspExt,text:suspExt?'Подозрительная доменная зона (.tk, .xyz...)':'Доменная зона не вызывает подозрений'},
-       {ok:!hasRedir,text:hasRedir?'Параметры переадресации — возможная ловушка':'Переадресация не обнаружена'}],
-      [{cls:isSafe?'ok':'bad',label:'HTTPS'},{cls:!hasIP?'ok':'bad',label:'Домен'},{cls:!suspExt?'ok':'warn',label:'Зона'},{cls:!hasRedir?'ok':'warn',label:'Редирект'}]);
-  });
-}
-function analyzeFile(){
-  const raw=document.getElementById('fileInput').value.trim();
-  if(!raw){ document.getElementById('fileInput').focus(); return; }
-  document.getElementById('fileResult').className='result-box';
-  scanAnimation('scanFillFile','scanAnimFile',()=>{
-    const name=raw.toLowerCase(),ext=name.split('.').pop();
-    const dangerExts=['exe','bat','cmd','com','vbs','ps1','msi','jar','hta','js','wsf','scr','pif'];
-    const warnExts=['docm','xlsm','pptm','zip','rar','7z','iso','dmg'];
-    const isDanger=dangerExts.includes(ext),isWarn=warnExts.includes(ext);
-    const doubleExt=/\.(exe|bat|cmd)\.(pdf|docx|jpg|txt)$|.(pdf|docx|jpg|txt)\.(exe|bat|cmd)$/.test(name);
-    const suspName=/invoice|payment|account|verify|urgent|update|crack|patch|keygen/.test(name);
-    const cls=isDanger||doubleExt?'danger':isWarn||suspName?'warning':'safe';
-    showResult('fileResult',cls,cls==='safe'?'✅':cls==='warning'?'⚠️':'🚨',
-      cls==='safe'?'Расширение файла не вызывает подозрений':cls==='warning'?'Требуется осторожность':'Опасное расширение! Не открывайте без проверки',
-      [{ok:!isDanger,text:isDanger?`Расширение .${ext} является исполняемым — высокий риск`:`Расширение .${ext} не исполняемое`},
-       {ok:!doubleExt,text:doubleExt?'Двойное расширение — классический трюк маскировки':'Двойного расширения нет'},
-       {ok:!suspName,text:suspName?'Имя файла содержит подозрительные слова':'Имя файла не вызывает подозрений'},
-       {ok:!isWarn,text:isWarn?`Архивы и документы с макросами (.${ext}) могут скрывать угрозы`:'Формат безопасный'}],
-      [{cls:!isDanger?'ok':'bad',label:'Расш.'},{cls:!doubleExt?'ok':'bad',label:'Дубль'},{cls:!suspName?'ok':'warn',label:'Имя'},{cls:!isWarn?'ok':'warn',label:'Формат'}]);
-  });
-}
-function analyzeEmail(){
-  const raw=document.getElementById('emailInput').value.trim();
-  if(!raw){ document.getElementById('emailInput').focus(); return; }
-  document.getElementById('emailResult').className='result-box';
-  scanAnimation('scanFillEmail','scanAnimEmail',()=>{
-    const parts=raw.toLowerCase().split('@'),domain=parts[1]||'',local=parts[0]||'';
-    const freeP=['gmail.com','yahoo.com','hotmail.com','mail.ru','yandex.ru','outlook.com'];
-    const isFree=freeP.includes(domain),hasDots=local.split('.').length>4;
-    const suspDomain=/\d{3,}/.test(domain)||domain.split('.').length>3;
-    const suspLocal=/^[a-z]{1,3}\d{4,}/.test(local)||local.length>30;
-    const cls=suspDomain||suspLocal?'danger':isFree&&hasDots?'warning':'safe';
-    showResult('emailResult',cls,cls==='safe'?'✅':cls==='warning'?'⚠️':'🚨',
-      cls==='safe'?'Email выглядит легитимным':cls==='warning'?'Стоит проявить осторожность':'Признаки поддельного адреса!',
-      [{ok:!suspDomain,text:suspDomain?'Подозрительный домен отправителя':'Домен выглядит нормально'},
-       {ok:!suspLocal,text:suspLocal?'Имя пользователя похоже на автоматически сгенерированное':'Имя пользователя выглядит естественно'},
-       {ok:!hasDots,text:hasDots?'Много точек — характерно для спама':'Количество точек в норме'},
-       {ok:!isFree,text:isFree?'Бесплатный провайдер — компании обычно используют корпоративный домен':'Корпоративный домен'}],
-      [{cls:!suspDomain?'ok':'bad',label:'Домен'},{cls:!suspLocal?'ok':'warn',label:'Имя'},{cls:!hasDots?'ok':'warn',label:'Структура'},{cls:!isFree?'ok':'warn',label:'Провайдер'}]);
-  });
-}
-document.querySelectorAll('.tab-btn').forEach(btn=>{
-  btn.addEventListener('click',()=>{
-    document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
-    btn.classList.add('active');
-    const tab=btn.dataset.tab;
-    ['url','file','email'].forEach(t=>{ const el=document.getElementById('tab-'+t); if(el) el.style.display=t===tab?'block':'none'; });
-  });
-});
+function scanAnimation(barId,animId,cb){ const anim=document.getElementById(animId),fill=document.getElementById(barId); if(!anim||!fill) return; anim.classList.add('show'); fill.style.width='0%'; let p=0; const iv=setInterval(()=>{ p+=Math.random()*18+4; if(p>=100){ p=100; clearInterval(iv); setTimeout(()=>{ anim.classList.remove('show'); fill.style.width='0%'; cb(); },200); } fill.style.width=p+'%'; },80); }
+function showResult(boxId,cls,icon,title,checks,indicators){ const box=document.getElementById(boxId); if(!box) return; box.className='result-box show '+cls; box.innerHTML=`<div class="result-header"><span class="result-icon">${icon}</span><span>${title}</span></div><ul class="result-list">${checks.map(c=>`<li><span class="ri">${c.ok?'✅':'⚠️'}</span><span>${c.text}</span></li>`).join('')}</ul><div class="check-indicators">${indicators.map(ind=>`<div class="indicator"><div class="ind-dot ${ind.cls}"></div><span>${ind.label}</span></div>`).join('')}</div>`; }
+function analyzeURL(){ const raw=document.getElementById('urlInput').value.trim(); if(!raw){ document.getElementById('urlInput').focus(); return; } document.getElementById('urlResult').className='result-box'; scanAnimation('scanFill','scanAnim',()=>{ let url; try{ url=new URL(raw.startsWith('http')?raw:'https://'+raw); }catch{ url={hostname:raw,protocol:'http:',pathname:'/',search:''}; } const host=url.hostname.toLowerCase(),path=(url.pathname||'')+(url.search||''),isSafe=url.protocol==='https:',hasIP=/\d{1,3}(\.\d{1,3}){3}/.test(host),longSub=host.split('.').length>4,suspWords=/verify|secure|login|account|update|confirm|paypal|bank|ebay|amazon|google/.test(host)&&!['google.com','amazon.com','paypal.com'].includes(host),suspExt=/\.(tk|ml|ga|cf|gq|xyz|top|click|link)$/.test(host),longPath=path.length>150,hasRedir=/redirect|redir|url=|goto=|forward/.test(path.toLowerCase()),riskCount=[!isSafe,hasIP,longSub,suspWords,suspExt,longPath,hasRedir].filter(Boolean).length,cls=riskCount===0?'safe':riskCount<=2?'warning':'danger'; showResult('urlResult',cls,riskCount===0?'✅':riskCount<=2?'⚠️':'🚨',riskCount===0?'Ссылка выглядит безопасно':riskCount<=2?'Обнаружены подозрительные признаки':'Высокий риск — не переходите!',[{ok:isSafe,text:isSafe?'Протокол HTTPS':'Отсутствует HTTPS'},{ok:!hasIP,text:hasIP?'IP-адрес вместо домена':'Доменное имя'},{ok:!longSub,text:longSub?'Много поддоменов — маскировка':'Структура нормальная'},{ok:!suspExt,text:suspExt?'Подозрительная доменная зона':'Зона не вызывает подозрений'},{ok:!hasRedir,text:hasRedir?'Параметры переадресации':'Переадресация не найдена'}],[{cls:isSafe?'ok':'bad',label:'HTTPS'},{cls:!hasIP?'ok':'bad',label:'Домен'},{cls:!suspExt?'ok':'warn',label:'Зона'},{cls:!hasRedir?'ok':'warn',label:'Редирект'}]); }); }
+function analyzeFile(){ const raw=document.getElementById('fileInput').value.trim(); if(!raw){ document.getElementById('fileInput').focus(); return; } document.getElementById('fileResult').className='result-box'; scanAnimation('scanFillFile','scanAnimFile',()=>{ const name=raw.toLowerCase(),ext=name.split('.').pop(),dangerExts=['exe','bat','cmd','com','vbs','ps1','msi','jar','hta','js','wsf','scr','pif'],warnExts=['docm','xlsm','pptm','zip','rar','7z','iso','dmg'],isDanger=dangerExts.includes(ext),isWarn=warnExts.includes(ext),doubleExt=/\.(exe|bat|cmd)\.(pdf|docx|jpg|txt)$/.test(name),suspName=/invoice|payment|account|verify|urgent|update|crack|patch|keygen/.test(name),cls=isDanger||doubleExt?'danger':isWarn||suspName?'warning':'safe'; showResult('fileResult',cls,cls==='safe'?'✅':cls==='warning'?'⚠️':'🚨',cls==='safe'?'Расширение не вызывает подозрений':cls==='warning'?'Требуется осторожность':'Опасное расширение!',[{ok:!isDanger,text:isDanger?`Расширение .${ext} — исполняемый файл`:`Расширение .${ext} безопасно`},{ok:!doubleExt,text:doubleExt?'Двойное расширение — маскировка':'Двойного расширения нет'},{ok:!suspName,text:suspName?'Подозрительное имя файла':'Имя файла нормальное'},{ok:!isWarn,text:isWarn?'Архивы/макросы могут скрывать угрозы':'Формат безопасный'}],[{cls:!isDanger?'ok':'bad',label:'Расш.'},{cls:!doubleExt?'ok':'bad',label:'Дубль'},{cls:!suspName?'ok':'warn',label:'Имя'},{cls:!isWarn?'ok':'warn',label:'Формат'}]); }); }
+function analyzeEmail(){ const raw=document.getElementById('emailInput').value.trim(); if(!raw){ document.getElementById('emailInput').focus(); return; } document.getElementById('emailResult').className='result-box'; scanAnimation('scanFillEmail','scanAnimEmail',()=>{ const parts=raw.toLowerCase().split('@'),domain=parts[1]||'',local=parts[0]||'',freeP=['gmail.com','yahoo.com','hotmail.com','mail.ru','yandex.ru','outlook.com'],isFree=freeP.includes(domain),hasDots=local.split('.').length>4,suspDomain=/\d{3,}/.test(domain)||domain.split('.').length>3,suspLocal=/^[a-z]{1,3}\d{4,}/.test(local)||local.length>30,cls=suspDomain||suspLocal?'danger':isFree&&hasDots?'warning':'safe'; showResult('emailResult',cls,cls==='safe'?'✅':cls==='warning'?'⚠️':'🚨',cls==='safe'?'Email выглядит легитимным':cls==='warning'?'Стоит проявить осторожность':'Признаки поддельного адреса!',[{ok:!suspDomain,text:suspDomain?'Подозрительный домен':'Домен выглядит нормально'},{ok:!suspLocal,text:suspLocal?'Имя похоже на автоматически сгенерированное':'Имя пользователя нормальное'},{ok:!hasDots,text:hasDots?'Много точек — признак спама':'Количество точек в норме'},{ok:!isFree,text:isFree?'Бесплатный провайдер':'Корпоративный домен'}],[{cls:!suspDomain?'ok':'bad',label:'Домен'},{cls:!suspLocal?'ok':'warn',label:'Имя'},{cls:!hasDots?'ok':'warn',label:'Структура'},{cls:!isFree?'ok':'warn',label:'Провайдер'}]); }); }
 
-/* ═══════════════════════════════════════════════════════════
-   GLOSSARY
-═══════════════════════════════════════════════════════════ */
-function renderGlossary(data){
-  const grid=document.getElementById('glossGrid'),empty=document.getElementById('glossEmpty'),count=document.getElementById('glossCount');
-  if(!grid) return;
-  grid.innerHTML='';
-  if(!data.length){ if(empty) empty.classList.add('show'); if(count) count.textContent=''; return; }
-  if(empty) empty.classList.remove('show');
-  if(count) count.textContent=`Показано: ${data.length} из ${GLOSSARY.length}`;
-  data.forEach(g=>{ const el=document.createElement('div'); el.className='gloss-item'; el.innerHTML=`<div class="gloss-term">${g.term}</div><div class="gloss-def">${g.def}</div><span class="gloss-cat">${g.cat}</span>`; grid.appendChild(el); });
-}
-function filterGlossary(){
-  const q=(document.getElementById('glossSearch').value||'').toLowerCase().trim();
-  renderGlossary(q?GLOSSARY.filter(g=>g.term.toLowerCase().includes(q)||g.def.toLowerCase().includes(q)||g.cat.toLowerCase().includes(q)):GLOSSARY);
-}
+document.querySelectorAll('.tab-btn').forEach(btn=>{ btn.addEventListener('click',()=>{ document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active')); btn.classList.add('active'); const tab=btn.dataset.tab; ['url','file','email'].forEach(t=>{ const el=document.getElementById('tab-'+t); if(el) el.style.display=t===tab?'block':'none'; }); }); });
 
-/* ═══════════════════════════════════════════════════════════
-   FAQ
-═══════════════════════════════════════════════════════════ */
-function renderFAQ(){
-  const list=document.getElementById('faqList'); if(!list) return;
-  list.innerHTML='';
-  FAQS.forEach(f=>{ const el=document.createElement('div'); el.className='faq-item'; el.innerHTML=`<button class="faq-trigger"><span class="faq-q">${f.q}</span><div class="faq-icon">+</div></button><div class="faq-body"><div class="faq-ans">${f.a}</div></div>`; el.querySelector('.faq-trigger').addEventListener('click',()=>{ el.classList.toggle('open'); }); list.appendChild(el); });
-}
+function renderGlossary(data){ const grid=document.getElementById('glossGrid'),empty=document.getElementById('glossEmpty'),count=document.getElementById('glossCount'); if(!grid) return; grid.innerHTML=''; if(!data.length){ if(empty) empty.classList.add('show'); if(count) count.textContent=''; return; } if(empty) empty.classList.remove('show'); if(count) count.textContent=`Показано: ${data.length} из ${GLOSSARY.length}`; data.forEach(g=>{ const el=document.createElement('div'); el.className='gloss-item'; el.innerHTML=`<div class="gloss-term">${g.term}</div><div class="gloss-def">${g.def}</div><span class="gloss-cat">${g.cat}</span>`; grid.appendChild(el); }); }
+function filterGlossary(){ const q=(document.getElementById('glossSearch').value||'').toLowerCase().trim(); renderGlossary(q?GLOSSARY.filter(g=>g.term.toLowerCase().includes(q)||g.def.toLowerCase().includes(q)||g.cat.toLowerCase().includes(q)):GLOSSARY); }
+function renderFAQ(){ const list=document.getElementById('faqList'); if(!list) return; list.innerHTML=''; FAQS.forEach(f=>{ const el=document.createElement('div'); el.className='faq-item'; el.innerHTML=`<button class="faq-trigger"><span class="faq-q">${f.q}</span><div class="faq-icon">+</div></button><div class="faq-body"><div class="faq-ans">${f.a}</div></div>`; el.querySelector('.faq-trigger').addEventListener('click',()=>el.classList.toggle('open')); list.appendChild(el); }); }
 
-/* ═══════════════════════════════════════════════════════════
-   BURGER
-═══════════════════════════════════════════════════════════ */
 document.getElementById('burger').addEventListener('click',function(){ this.classList.toggle('open'); document.getElementById('mobileNav').classList.toggle('open'); });
 document.querySelectorAll('#mobileNav a').forEach(a=>{ a.addEventListener('click',()=>{ document.getElementById('burger').classList.remove('open'); document.getElementById('mobileNav').classList.remove('open'); }); });
 
-/* ═══════════════════════════════════════════════════════════
-   COUNTERS & OBSERVERS
-═══════════════════════════════════════════════════════════ */
-function animateCounters(){
-  document.querySelectorAll('[data-target]').forEach(el=>{
-    const target=+el.dataset.target; let cur=0; const step=Math.ceil(target/40);
-    const iv=setInterval(()=>{ cur=Math.min(cur+step,target); el.textContent=cur; if(cur>=target) clearInterval(iv); },30);
-  });
-}
-function observeFadeUps(){
-  const obs=new IntersectionObserver(entries=>{ entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('visible'); }); },{threshold:.1});
-  document.querySelectorAll('.fade-up:not(.visible)').forEach(el=>obs.observe(el));
-}
+function animateCounters(){ document.querySelectorAll('[data-target]').forEach(el=>{ const target=+el.dataset.target; let cur=0; const step=Math.ceil(target/40); const iv=setInterval(()=>{ cur=Math.min(cur+step,target); el.textContent=cur; if(cur>=target) clearInterval(iv); },30); }); }
+function observeFadeUps(){ const obs=new IntersectionObserver(entries=>{ entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('visible'); }); },{threshold:.1}); document.querySelectorAll('.fade-up:not(.visible)').forEach(el=>obs.observe(el)); }
 window.addEventListener('scroll',()=>{ const b=document.getElementById('back-top'); if(b) b.classList.toggle('visible',window.scrollY>400); },{passive:true});
-
-/* ═══════════════════════════════════════════════════════════
-   DANGER URL DATABASE — DATA & HELPERS
-═══════════════════════════════════════════════════════════ */
-const BLOCKED_WORDS=['хуй','хуе','хуя','хуё','пизд','пиздец','ёбан','еба','еби','ебать','блядь','бляди','блять','сука','суки','мудак','мудил','залупа','долбоёб','долбоеб','шлюха','шлюхи','проститутк','нахуй','похуй','нахер','khuy','pizd','eban','ebat','blyad','suka','mudak','zalupa','fuck','shit','bitch','cunt','nigger','nigga','faggot','whore','slut','bastard','motherfuck','asshole','террор','взорв','убийц','nazi','нацист'];
-const BLOCKED_URL_PATTERNS=['porn','porno','xxx','sex','anal','nude','naked','nsfw','adult','erotic','hentai','fetish','webcam','onlyfans','brazzers','pornhub','xvideos','xnxx','redtube','youporn','chaturbate','порно','эротик','голая','интим'];
-const TRUSTED_DOMAINS=['google.com','google.ru','bing.com','yandex.ru','yandex.com','yahoo.com','duckduckgo.com','vk.com','ok.ru','facebook.com','instagram.com','twitter.com','x.com','tiktok.com','youtube.com','youtu.be','telegram.org','t.me','whatsapp.com','discord.com','discord.gg','reddit.com','pinterest.com','linkedin.com','snapchat.com','gmail.com','mail.ru','outlook.com','hotmail.com','protonmail.com','rambler.ru','amazon.com','wildberries.ru','ozon.ru','aliexpress.com','avito.ru','ebay.com','sberbank.ru','tbank.ru','vtb.ru','alfabank.ru','gosuslugi.ru','mos.ru','nalog.ru','cbr.ru','government.ru','kremlin.ru','microsoft.com','apple.com','github.com','gitlab.com','stackoverflow.com','cloudflare.com','virustotal.com','haveibeenpwned.com','kaspersky.com','drweb.com','rbc.ru','ria.ru','tass.ru','bbc.com','cnn.com','wikipedia.org','coursera.org','stepik.org'];
-
-function getDomain(input){
-  let s=input.trim().toLowerCase().replace(/^https?:\/\//i,'');
-  return s.split('/')[0].split('?')[0].split('#')[0];
-}
-function isTrustedDomain(domain){ return TRUSTED_DOMAINS.some(t=>domain===t||domain.endsWith('.'+t)); }
-function isNSFWUrl(input){ const l=input.toLowerCase(); return BLOCKED_URL_PATTERNS.some(p=>l.includes(p)); }
-function isValidURL(input){
-  const s=input.trim();
-  if(/^[a-z]+:\/\//i.test(s)&&!/^https?:\/\//i.test(s)) return false;
-  const domain=getDomain(s);
-  return /^[a-zA-Z0-9]([a-zA-Z0-9\-]{0,61}[a-zA-Z0-9])?(\.[a-zA-Z0-9]([a-zA-Z0-9\-]{0,61}[a-zA-Z0-9])?)+$/.test(domain)&&domain.length>=4&&domain.length<=200;
-}
-function normalizeURL(input){ let u=input.trim(); if(!/^https?:\/\//i.test(u)) u='http://'+u; return u; }
-function containsBlockedWords(text){ const l=text.toLowerCase(); return BLOCKED_WORDS.some(w=>l.includes(w)); }
-function escapeHtml(s){ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
-function formatDate(d){ return new Date(d).toLocaleDateString('ru-RU',{day:'2-digit',month:'short',year:'numeric'}); }
-function saveDangerURLs(){ try{ localStorage.setItem('cg_danger_urls',JSON.stringify(dangerURLs)); }catch(e){} }
-function showValidationError(msg){ const el=document.getElementById('durlValidationError'); if(el){ el.textContent=msg; el.style.display='block'; setTimeout(()=>{ el.style.display='none'; },6000); } }
-function updateDescCounter(){ const ta=document.getElementById('durlDesc'),c=document.getElementById('descCounter'); if(ta&&c) c.textContent=ta.value.length+'/300'; }
-
-const SEED_URLS=[
-  {id:'s1',url:'http://paypa1-secure-login.tk/account/verify',type:'phishing',desc:'Поддельная страница входа PayPal. HTTP без шифрования, IP-адрес в домене.',date:'2026-03-12',votes:14},
-  {id:'s2',url:'http://win-prize2026.xyz/claim-now',type:'scam',desc:'Ресурс сообщает о "выигрыше" и требует данные карты. Классическая схема мошенничества.',date:'2026-03-18',votes:9},
-  {id:'s3',url:'http://update-flashplayer.ml/setup.exe',type:'malware',desc:'Маскируется под обновление Flash Player. Файл setup.exe содержит троян-загрузчик.',date:'2026-03-22',votes:21},
-  {id:'s4',url:'https://gosuslugi-id.ru/login',type:'phishing',desc:'Клон портала Госуслуг с похожим доменом. Крадёт учётные данные ЕСИА.',date:'2026-04-01',votes:37},
-  {id:'s5',url:'http://sbr-bank-personal.cf/confirm',type:'phishing',desc:'Фишинговая страница под видом Сбербанка. Собирает данные карт через поддельную форму.',date:'2026-04-05',votes:28},
-];
-
-let dangerURLs=[];
-try{ const s=JSON.parse(localStorage.getItem('cg_danger_urls')||'null'); dangerURLs=s||JSON.parse(JSON.stringify(SEED_URLS)); }catch(e){ dangerURLs=JSON.parse(JSON.stringify(SEED_URLS)); }
-
-/* ═══════════════════════════════════════════════════════════
-   RENDER DANGER URLS — единственная версия, с поддержкой admin
-═══════════════════════════════════════════════════════════ */
-function renderDangerURLs(list){
-  const el=document.getElementById('durlList'),countEl=document.getElementById('durlCount');
-  if(!el||!countEl) return;
-  const n=dangerURLs.length;
-  countEl.textContent=`${n} ${n===1?'запись':n<5?'записи':'записей'}`;
-  if(!list||!list.length){
-    el.innerHTML=`<div class="durls-empty">${isAdminMode?'🔧 База пуста. Восстановите исходные данные через панель.':'Записи не найдены.'}</div>`;
-    return;
-  }
-  el.innerHTML='';
-  if(isAdminMode) el.classList.add('admin-mode'); else el.classList.remove('admin-mode');
-  const typeLabels={phishing:'Фишинг',malware:'Вредоносное ПО',scam:'Мошенничество',spam:'Спам',other:'Другое'};
-  const typeOpts=Object.entries(typeLabels).map(([v,l])=>`<option value="${v}">${l}</option>`).join('');
-  [...list].sort((a,b)=>b.votes-a.votes).forEach(u=>{
-    const div=document.createElement('div');
-    div.className='durl-item';
-    const myVote=(JSON.parse(localStorage.getItem('cg_votes')||'{}')||{})[u.id];
-    const adminCtrl=isAdminMode?`
-      <div class="adm-controls">
-        <button class="adm-edit-btn" onclick="adminToggleEdit('${u.id}')">✏️ Редактировать</button>
-        <button class="adm-del" onclick="adminDeleteEntry('${u.id}')">🗑 Удалить</button>
-      </div>
-      <div class="adm-edit-form" id="adm-form-${u.id}">
-        <input class="adm-ei" id="adm-url-${u.id}" type="text" placeholder="URL"/>
-        <select class="adm-sel" id="adm-type-${u.id}">${typeOpts}</select>
-        <textarea class="adm-ta" id="adm-desc-${u.id}" placeholder="Описание..."></textarea>
-        <div class="adm-row">
-          <button class="adm-save" onclick="adminSaveEdit('${u.id}')">💾 Сохранить</button>
-          <button class="adm-cancel" onclick="adminToggleEdit('${u.id}')">Отмена</button>
-        </div>
-      </div>`:'';
-    div.innerHTML=`
-      <span class="durl-badge ${u.type}">${typeLabels[u.type]||'Другое'}</span>
-      <div class="durl-body">
-        <div class="durl-url">⛔ <span style="user-select:all;cursor:text;">${escapeHtml(u.url)}</span></div>
-        ${u.desc?`<div class="durl-desc">${escapeHtml(u.desc)}</div>`:''}
-        <div class="durl-meta">
-          <span>📅 ${formatDate(u.date)}</span>
-          <span>🔴 ${typeLabels[u.type]||'Другое'}</span>
-          <span style="color:#FF3B5C;font-weight:600;">⛔ Не переходите</span>
-        </div>
-        ${adminCtrl}
-      </div>
-      <div class="durl-votes">
-        <button class="vote-btn${myVote?' voted':''}" onclick="voteURL('${u.id}',this)">${myVote?'🔴':'⚠️'}</button>
-        <span class="vote-count" id="vc_${u.id}">${u.votes}</span>
-      </div>`;
-    el.appendChild(div);
-  });
-}
-
-function voteURL(id,btn){
-  const votes=JSON.parse(localStorage.getItem('cg_votes')||'{}');
-  if(votes[id]) return;
-  votes[id]=true; localStorage.setItem('cg_votes',JSON.stringify(votes));
-  const u=dangerURLs.find(x=>x.id===id);
-  if(u){ u.votes++; saveDangerURLs(); }
-  btn.classList.add('voted'); btn.textContent='🔴';
-  const vc=document.getElementById('vc_'+id); if(vc) vc.textContent=u?u.votes:'';
-}
-
-/* ═══════════════════════════════════════════════════════════
-   SUBMIT & SEARCH
-═══════════════════════════════════════════════════════════ */
-let durlTermsAccepted=false;
-try{ durlTermsAccepted=localStorage.getItem('cg_durl_terms')==='yes'; }catch(e){}
-const durlObserver=new IntersectionObserver(entries=>{ entries.forEach(e=>{ if(e.isIntersecting&&!durlTermsAccepted){ document.getElementById('durlModal').style.display='flex'; durlObserver.disconnect(); } }); },{threshold:.2});
-function acceptDurlTerms(){ durlTermsAccepted=true; try{ localStorage.setItem('cg_durl_terms','yes'); }catch(e){} document.getElementById('durlModal').style.display='none'; }
-
-function submitDangerURL(){
-  const rawInput=(document.getElementById('durlInput').value||'').trim();
-  const type=document.getElementById('durlType').value;
-  const desc=(document.getElementById('durlDesc').value||'').trim();
-  if(!rawInput){ showValidationError('⛔ Введите URL-адрес.'); document.getElementById('durlInput').focus(); return; }
-  if(/^[a-z]+:\/\//i.test(rawInput)&&!/^https?:\/\//i.test(rawInput)){ showValidationError('⛔ Некорректный протокол. Используйте http:// или https://, либо просто домен: example.com'); return; }
-  if(!isValidURL(rawInput)){ showValidationError('⛔ Некорректный адрес. Введите домен: example.com или https://example.com'); return; }
-  const domain=getDomain(rawInput);
-  if(isNSFWUrl(rawInput)||isNSFWUrl(domain)){ showValidationError('⛔ Сайты с материалами для взрослых не принимаются в базу.'); return; }
-  if(desc&&containsBlockedWords(desc)){ showValidationError('⛔ Описание содержит недопустимые слова.'); return; }
-  if(isTrustedDomain(domain)){ showValidationError(`⛔ Домен «${domain}» — проверенный ресурс. Добавить как опасный невозможно.`); return; }
-  if(desc.length>300){ showValidationError('⛔ Описание слишком длинное. Максимум 300 символов.'); return; }
-  if(/https?:\/\/[^\s]+/.test(desc)){ showValidationError('⛔ Не вставляйте ссылки в описание.'); return; }
-  if(desc.length>0&&desc.length<10){ showValidationError('⛔ Описание слишком короткое (минимум 10 символов).'); return; }
-  const url=normalizeURL(rawInput);
-  if(dangerURLs.find(u=>getDomain(u.url)===domain)){
-    const s=document.getElementById('durlSuccess');
-    s.className='durls-success show'; s.style.cssText='background:rgba(255,176,32,.08);border-color:rgba(255,176,32,.25);color:var(--amber);';
-    s.innerHTML='⚠️ Этот домен уже есть в базе.';
-    setTimeout(()=>{ s.className='durls-success'; s.style.cssText=''; },3500); return;
-  }
-  dangerURLs.unshift({id:'u'+Date.now(),url,type,desc,date:new Date().toISOString().slice(0,10),votes:1});
-  saveDangerURLs();
-  document.getElementById('durlInput').value='';
-  document.getElementById('durlDesc').value='';
-  document.getElementById('durlSearch').value='';
-  document.getElementById('durlCheckResult').className='durls-check-result';
-  document.getElementById('durlValidationError').style.display='none';
-  updateDescCounter();
-  const s=document.getElementById('durlSuccess');
-  s.className='durls-success show'; s.style.cssText='';
-  s.innerHTML='✅ Ссылка добавлена. Спасибо за вклад в безопасность!';
-  setTimeout(()=>{ s.className='durls-success'; },4000);
-  renderDangerURLs(dangerURLs);
-}
-
-function searchDangerURLs(){
-  const q=(document.getElementById('durlSearch').value||'').toLowerCase().trim();
-  const resultEl=document.getElementById('durlCheckResult');
-  if(!q){ if(resultEl) resultEl.className='durls-check-result'; renderDangerURLs(dangerURLs); return; }
-  const matches=dangerURLs.filter(u=>u.url.toLowerCase().includes(q)||(u.desc||'').toLowerCase().includes(q));
-  if(q.length>4){
-    const qDomain=getDomain(q.startsWith('http')?q:'http://'+q);
-    if(isTrustedDomain(qDomain)){ if(resultEl){ resultEl.className='durls-check-result notfound show'; resultEl.innerHTML=`✅ <strong>${escapeHtml(qDomain)}</strong> — проверенный и надёжный сайт.`; } renderDangerURLs([]); return; }
-    if(resultEl){
-      if(matches.length>0){ resultEl.className='durls-check-result found show'; resultEl.innerHTML=`🚨 <strong>Внимание!</strong> Найдено совпадений: ${matches.length}. <strong>Не переходите.</strong>`; }
-      else { resultEl.className='durls-check-result notfound show'; resultEl.textContent='✅ В нашей базе не числится. Проверьте через VirusTotal.'; }
-    }
-  } else if(resultEl) resultEl.className='durls-check-result';
-  renderDangerURLs(matches);
-}
 
 document.getElementById('durlInput').addEventListener('keydown',e=>{ if(e.key==='Enter') submitDangerURL(); });
 document.getElementById('durlSearch').addEventListener('keydown',e=>{ if(e.key==='Enter') searchDangerURLs(); });
 document.getElementById('urlInput').addEventListener('keydown',e=>{ if(e.key==='Enter') analyzeURL(); });
 document.getElementById('fileInput').addEventListener('keydown',e=>{ if(e.key==='Enter') analyzeFile(); });
 document.getElementById('emailInput').addEventListener('keydown',e=>{ if(e.key==='Enter') analyzeEmail(); });
+document.getElementById('loginEmail')?.addEventListener('keydown',e=>{ if(e.key==='Enter') doLogin(); });
+document.getElementById('loginPass')?.addEventListener('keydown',e=>{ if(e.key==='Enter') doLogin(); });
 
-/* ═══════════════════════════════════════════════════════════
-   INIT
-═══════════════════════════════════════════════════════════ */
 document.addEventListener('DOMContentLoaded',()=>{
-  renderChecklists();
-  updateMeter();
-  renderDangerURLs(dangerURLs);
-  renderGlossary(GLOSSARY);
-  renderFAQ();
-  observeFadeUps();
+  renderChecklists(); updateMeter(); renderGlossary(GLOSSARY); renderFAQ(); observeFadeUps();
   setTimeout(animateCounters,400);
+  loadAndRenderURLs(); loadLeaderboard();
   const ds=document.getElementById('danger-urls'); if(ds) durlObserver.observe(ds);
   if(isAdminMode) activateAdminMode();
 });
